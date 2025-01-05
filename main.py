@@ -40,7 +40,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
             
-        # Update
+        # Update. tu se radi o 0.016 jer smo na 60fps.
         for updatable_item in updatable:
             updatable_item.update(dt)
         
