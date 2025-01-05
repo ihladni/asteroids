@@ -53,7 +53,7 @@ def main():
             for bullet in shots:
                 if bullet.collided(ast):
                     bullet.kill()
-                    ast.kill()    
+                    ast.split()    
 
             if player.collided(ast):
                 print("Game over")

@@ -31,9 +31,9 @@ class Player(CircleShape):
         self.position += forward * PLAYER_SPEED * dt
 
     def update(self, dt):
-        
         self.shot_timer -= dt
-        print(self.shot_timer)
+        # print(self.shot_timer)
+
         if self.shot_timer < 0:
             self.shot_timer = 0
 
