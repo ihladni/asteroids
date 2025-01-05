@@ -5,13 +5,11 @@ from shot import Shot
 
 class Player(CircleShape):
     container = None
-    shot_timer = 0
 
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.rotation = 0
         super().__init__(x, y, PLAYER_RADIUS)
+        self.rotation = 0
+        self.shot_timer = 0
         
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
@@ -56,7 +54,7 @@ class Player(CircleShape):
         if self.shot_timer > 0:
             return
 
-        new_shot = Shot(self.x, self.y)
+        new_shot = Shot(self.position.x, self.position.y)
         new_shot.velocity = pygame.Vector2(0, 1).rotate(self.rotation) * PLAYER_SHOOT_SPEED
         self.shot_timer = PLAYER_SHOOT_COOLDOWN
         
