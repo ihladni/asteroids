@@ -75,22 +75,5 @@ def main():
         dt = clock.tick(60) / 1000
     #############################################
 
-"""
-Destruction
-
-Okay so bullets are flying, but they don't do anything. Let's kill some asteroids!
-
-There are three types of asteroids:
-
-    Large
-    Medium
-    Small
-
-When a large asteroid is destroyed, it should split into two medium asteroids. When a medium asteroid is destroyed, it should split into two small asteroids. When a small asteroid is destroyed, it should disappear.
-
-For now, we'll just always make the asteroids disappear when they're destroyed. We will handle splitting later.
-"""
-
-
 if __name__ == "__main__":
     main()
